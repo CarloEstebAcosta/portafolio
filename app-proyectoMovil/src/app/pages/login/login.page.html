@@ -1,0 +1,56 @@
+<ion-app class="fondo">
+  <ion-split-pane content-id="main-content">
+    <!-- Menú lateral -->
+    <ion-menu side="end" content-id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <img src="assets\Img\png\gorro_bco.png" alt="Logotipo" style="height: 50px; margin-right: 50px;"/>
+          </ion-buttons>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list>
+          <ion-item>Tutorial</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- Contenido principal -->
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <img src="assets\Img\png\gorro_bco.png" alt="Logotipo" style="height: 50px; margin-right: 50px;"/>
+          </ion-buttons>
+          <ion-title>Login</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content >
+        <img src="assets\Img\svg\xt-logoaz.svg" alt="Logotipo" style="max-block-size"/>
+        <ion-card>
+          <ion-list>           
+            <ion-item>
+              <ion-input 
+                [(ngModel)]="mdl_usuario" label="Ingresar Usuario"
+                labelPlacement="floating" placeholder="Usuario"
+              ></ion-input>
+            </ion-item>            
+            <ion-item>
+              <ion-input
+                [(ngModel)]="mdl_contrasena" type="password" label="Ingresar Contraseña" labelPlacement="floating" placeholder="Contraseña"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-button (click)="ingresar()" expand="block">Ingresar</ion-button>
+          <ion-button (click)="crearUsuario()" expand="block" fill="outline">Crear Usuario</ion-button>
+          <ion-button (click)="invitado()" expand="block">Continuar como invitado</ion-button>
+        </ion-card>
+      </ion-content>
+    </div>
+  </ion-split-pane>
+</ion-app>

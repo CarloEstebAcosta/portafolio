@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>crearUsuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="centrado">
+  <ion-card class="tarjeta">
+    <ion-list class="lista">
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_usuario" label="Ingresar Usuario" labelPlacement="floating" placeholder="Usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_contrasena" type="password" label="Ingresar Contraseña" labelPlacement="floating" placeholder="Contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_contrasena2" type="password" label="Ingresar Contraseña nuevamente" labelPlacement="floating" placeholder="Contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_nombre" label= "Ingresar Nombre" labelPlacement="floating" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_apellidoP" label= "Ingresar Apellido Paterno" labelPlacement="floating" placeholder="Apellido Paterno"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_apellidoM" label= "Ingresar Apellido Materno" labelPlacement="floating" placeholder="Apellido Materno"></ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_correoCliente" label="Ingresar Correo" labelPlacement="floating" placeholder="Correo Electronico"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="mdl_edad" label= "Ingresa Edad" labelPlacement="floating" placeholder="Ingresa tu Edad"></ion-input>
+      </ion-item> 
+    </ion-list>
+    <ion-button (click)="crearUsuario()" expand="block">Crear Usurio</ion-button>
+    <ion-button (click)="atras()" expand="block" fill="outline">Atras</ion-button>
+  </ion-card>
+</ion-content>
+
